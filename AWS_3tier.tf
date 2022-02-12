@@ -37,6 +37,10 @@ resource "aws_db_instance" "default" {
     name           = "initial_db"
     username       = "<your-aws-username>"
     password       = "<your-aws-password>"
+    
+    tags = {
+        Service       = "test1"
+    }
 }
 
 # Create an Network Load Balancer
